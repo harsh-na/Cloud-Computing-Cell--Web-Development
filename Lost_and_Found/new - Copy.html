@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
+</head>
+<body>
+    <div id="head-container">
+    <div class="container">
+        DETAILS FORM
+    </div>
+    <div class="first">
+       <label> NAME:</label>
+    </div>
+<input type="text" id="second" placeholder="Enter Your Name" required>
+<div class="third">
+    <label>PHONE NUMBER:</label></div>
+    <input type="number" id="fourth" placeholder="Enter Your Phone Number" required>
+<div class="fifth">
+    <label>ADDRESS:</label>
+</div>
+<input type="text" id="sixth" placeholder="Enter The Location" required>
+<div class="sev">
+    <label>PET'S IMAGE:</label>
+</div>
+<input type = "file" id="img" name = "upload" accept = "image/*" />
+<div class="eig">
+    <label>EMAIL:</label>
+</div>
+<input type="email" id="nine"placeholder="Enter Your Email" required>
+<div class="ele">
+    <label>ANY OTHER DESCRIPTION ABOUT YOUR PET:</label>
+</div>
+<input type="text" id="des"placeholder="More About Your Pet" required>
+    <button type="submit" id="but">Submit</button>
+</div>
+<script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js'
+</script>
+<script>
+const firebaseConfig = {
+    apiKey: "AIzaSyDshwXM79swXJ2fnWFORAJ_A6OWavb97wE",
+    authDomain: "form-952bc.firebaseapp.com",
+    projectId: "form-952bc",
+    storageBucket: "form-952bc.appspot.com",
+    databaseURL:"https://form-952bc-default-rtdb.firebaseio.com",
+    messagingSenderId: "165528667660",
+    appId: "1:165528667660:web:ad5fcd5cff8781b462d029",
+    measurementId: "G-KYSHB96JVM"
+  };
+  firebase.initializeApp(firebaseConfig);
+  var FormDB = firebase.database().ref("Form");
+  document.getElementsById('head-container').addEventListener('submit',submitForm());
+  function submitForm(e){
+    e.preventDefault();
+    var name=getVal('second');
+    var number=getVal('fourth');
+    var address=getVal('sixth');
+    var image=getVal('img');
+    var email=getVal('nine');
+    var description=getVal('des');
+    Message(name,number,address,image,email,description);
+    
+  }
+  function getVal(name,number,address,image,email,description){
+    return document.getElementById(id).value;
+  }
+function Message(name,number,address,image,email,description)
+{
+            var newForm =FormDB.push();
+            newForm.set({
+                name:name,
+                location:address,
+                contact:number,
+                picture:image,
+                email:email,
+                details:description,
+});
+}
+
+</script>
+</body>
+</html>

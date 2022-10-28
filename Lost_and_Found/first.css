@@ -1,0 +1,126 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.background {
+
+    background-size: cover;
+    text-align: center;
+    height: 50px;
+}
+
+.backImg {
+    z-index: -1;
+    position: fixed;
+    left: 0%;
+    height: 700px;
+    width: 1300px;
+    
+}
+
+
+.image {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 0%;
+    top: 15px;
+}
+
+.laf {
+    position: fixed;
+    width: 1001px;
+    height: 161px;
+    left: 200px;
+    text-align: center;
+    top: 10px;
+    font-family: 'Carter One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 125px;
+    color: #FF725E;
+
+
+}
+
+.para p {
+    position: absolute;
+    width: 650px;
+    height: 300px;
+    left: 550px;
+    top: 150px;
+
+    font-family: 'Merienda';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.report button {
+
+    position: absolute;
+    width: 227px;
+    height: 85px;
+    left: 760px;
+    top: 350px;
+
+    background: #381810;
+    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 139px;
+
+}
+
+/*.rep button{
+    
+    position: absolute;
+    width: 227px;
+    height: 86px;
+    left: 760px;
+    top: 500px;
+
+    background: #381810;
+    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 139px;
+    background-color: #381810;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+
+    color: #FFFFFF;
+
+    
+}*/
+
+button {
+
+    position: absolute;
+    width: 120.71px;
+    height: 32.09px;
+    left: 859.2px;
+    top: 542px;
+    background-color: #381810;
+    font-style: 'Concert One';
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.report image {
+    position: absolute;
+    width: 66px;
+    height: 67px;
+    left: 790px;
+    top: 520px;
+
+    background-image: url('Dog_paw-cuate-removebg-preview.png');
+}
