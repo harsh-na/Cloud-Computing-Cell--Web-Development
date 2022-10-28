@@ -1,0 +1,72 @@
+html{
+	
+	margin: 0;
+	padding: 0;
+	font-style: sans-serif;
+	background-image: url('gt.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+
+
+}
+
+
+
+
+ .reveal {
+ 	color: black;
+	background: linear-gradient(#728f82 0 0),linear-gradient(#728f82  0 0);
+	background-size: 0 100%;
+	background-position: 0 0;
+	-webkit-background-clip: padding-box, text;
+	background-clip: padding-box, text;
+	background-repeat: no-repeat;
+	-webkit-box-decoration-break: clone;
+	box-decoration-break: clone;
+	animation: t 1.2s 0.5s  both, b 1.2s 1.3s both;
+
+
+
+}
+@keyframes t{
+	to{
+		background-size: 150% 100%;
+	}
+}
+@keyframes b{
+	to{
+		background-position: -200% 0,0 0;
+	}
+}
+.ft {
+	text-align: center;
+	color: black;
+	font-weight: 50px;
+	font-size: 50px;
+
+
+
+}
+.li{
+	color:#3b3d0a;
+
+	font-weight: 20px;
+	font-size: 30px;
+
+}
+ul{
+	list-style-image: url('health.jpg');
+	margin-left: 70px;
+}
+.pt {
+	text-align: center;
+	font-size: 30px;
+	color: #158a42;
+}
+.ht {
+	color: black;
+	font-size: 70px;
+	font-weight: 30px;
+}
