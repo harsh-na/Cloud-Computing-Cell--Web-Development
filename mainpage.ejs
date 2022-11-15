@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>movie box</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+
+  }
+  
+  body {
+    font-family: "Roboto", sans-serif;
+   background-color: #151515;
+   scroll-behavior: smooth;
+  }
+  
+  .navbar {
+    width: 105%;
+    height: 50px;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    color: white;
+    font-family: "Sen", sans-serif;
+  }
+  
+  .logo-container {
+    flex: 1;
+  }
+  
+  .logo {
+    font-size: 30px;
+    color: #4dbf00;
+  }
+  
+  .menu-container {
+    flex: 6;
+    margin-left: 20px;
+  }
+  
+  .menu-list {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  .menu-list-item {
+    margin-right: 40px;
+    cursor: pointer;
+    
+  }
+  
+  .menu-list-item.active {
+    font-weight: bold;
+    
+    
+  }
+  .menu-list-item-content{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+
+  }
+  .profile-container {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .profile-text-container {
+    margin: 0 20px;
+  }
+  
+  .profile-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  
+ 
+  .container {
+    background-color: #151515;
+    min-height: calc(100vh - 50px);
+    color: white;
+  }
+  
+  .content-container {
+    margin-left: 50px;
+    
+  }
+  
+  .featured-content {
+    height: 50vh;
+    padding: 50px;
+    
+  }
+  
+  .featured-title {
+    width: 250px;
+  }
+  
+  .featured-desc {
+    width: 500px;
+    color: lightgray;
+    margin-top: 100px;
+  }
+  
+  .featured-button {
+    background-color: #4dbf00;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 15px;
+  }
+  
+  .movie-list-container {
+    padding: 0 20px;
+    margin-top: 40px;
+  }
+  
+  .movie-list-wrapper {
+    position: relative;
+    overflow: hidden;
+   
+  }
+  
+  .movie-list {
+    display: flex;
+    align-items: center;
+    height: 350px;
+    transform: translate(0);
+    transition: all .5s ease-in-out;
+  }
+  
+  .movie-list-item {
+    margin-right: 30px;
+    position: relative;
+  }
+  
+  .movie-list-item:hover .movie-list-item-img {
+    transform: scale(1.025);
+    margin: 0 10px;
+    opacity: 0.5;
+  }
+  
+  .movie-list-item:hover .movie-list-item-title,
+  .movie-list-item:hover .movie-list-item-desc,
+  .movie-list-item:hover .movie-list-item-button {
+    opacity: 1;
+  }
+  
+  .movie-list-item-img {
+    transition: all 1s ease-in-out;
+    width: 315px;
+    height: 325px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  ::-webkit-scrollbar{
+    display: none;
+  }
+  .movie-list-item-title {
+    background-color: #333;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+  }
+  
+  .movie-list-item-desc {
+    background-color: #333;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 230px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+  }
+  
+  .movie-list-item-button {
+    padding: 10px;
+    background-color: #4dbf00;
+    color: white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+  }
+  
+  
+  
+ 
+  
+  @media only screen and (max-width: 940px){
+      .menu-container{
+          display: none;
+      }
+  }
+  /* ***************************************** */
+  .footer{
+    background: rgb(0 0 0);
+    height: auto;
+
+    padding-top: 40px;
+    color: #fff;
+
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    width: 105%;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 19px;
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+.socials a:hover{
+    color: aqua;
+}
+.footer-bottom{
+    background: rgb(1, 3, 41);
+   width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 18px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+
+}
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+.title{
+ 
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+   margin-top: 50px;
+    left: 80px;
+
+}
+.footer {
+    width: 100%;
+}
+@media (max-width: 768px) {
+      
+  .content-container {
+    margin-left: 23px;
+    margin-right: -20px;
+    
+  }
+  
+  .featured-content {
+    height: 50vh;
+    padding: 25px;
+    
+  }
+  
+  .featured-title {
+    width: 300px;
+  }
+  
+  .featured-desc {
+    width: 310px;
+    color: lightgray;
+    margin-top: 50px;
+  }
+  
+  .featured-button {
+    background-color: #4dbf00;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 15px;
+  }
+  
+  .movie-list-container {
+    padding: 0 20px;
+    margin-top: 40px;
+  }
+  
+  .movie-list-wrapper {
+    position: relative;
+    overflow: hidden;
+   
+  }
+  
+  .movie-list {
+    display: flex;
+    align-items: center;
+    height: 350px;
+    transform: translate(0);
+    transition: all .5s ease-in-out;
+  }
+    
+  .logo {
+    font-size: 20px;
+    color: #4dbf00;
+  }
+}
+@media (max-width:425px ) {
+    .menu-list-item-content{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+
+  }
+  .title{
+ 
+ padding: 0 20px;
+ font-size: 25px;
+ font-weight: bold;
+ position: absolute;
+margin-top: 50px;
+ left: 80px;
+
+}
+@media (max-width: 375px) {
+    .featured-content {
+    height: 50vh;
+    /* padding: 25px; */
+    
+  }
+  
+  .featured-title {
+    width: 425px;
+  }
+  
+  .featured-desc {
+    width: 425px;
+    color: lightgray;
+    margin-top: 50px;
+    font-size: 10px;
+  }
+  
+  .featured-button {
+    background-color: #4dbf00;
+    color: white;
+    /* padding: 10px 20px; */
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    /* margin: 15px; */
+  }
+  .footer{
+    background: rgb(0 0 0);
+    height: auto;
+    width: 105%;
+
+    /* padding-top: 40px; */
+    color: #fff;
+
+}
+.footer-bottom{
+    background: rgb(1, 3, 41);
+   
+    /* padding: 20px 0; */
+    text-align: center;
+}
+.navbar {
+    width: 105%;
+    height: 50px;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
+
+}
+    .footer-bottom {
+    background: rgb(1, 3, 41);
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+.footer{
+    width: 105%;
+}
+.footer-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+}
+@media (max-width: 320px) {
+    .featured-content {
+    height: 50vh;
+    /* padding: 25px; */
+    
+  }
+  
+  .featured-title {
+    width: 425px;
+  }
+  
+  .featured-desc {
+    width: 425px;
+    color: lightgray;
+    margin-top: 50px;
+    font-size: 10px;
+  }
+  
+  .featured-button {
+    background-color: #4dbf00;
+    color: white;
+    /* padding: 10px 20px; */
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    /* margin: 15px; */
+  }
+  .footer{
+    background: rgb(0 0 0);
+    height: auto;
+    width: 105%;
+
+    /* padding-top: 40px; */
+    color: #fff;
+
+}
+.footer-bottom{
+    background: rgb(1, 3, 41);
+   
+    /* padding: 20px 0; */
+    text-align: center;
+}
+.navbar {
+    width: 105%;
+    height: 50px;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
+
+}
+    .footer-bottom {
+    background: rgb(1, 3, 41);
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+        .video {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+       .mySlides {
+        border: 3px solid black;
+        border-radius: 10px;
+       }
+        .button-left {
+            width: 50px;
+            background: transparent;
+            outline: 0;
+            border: 0;
+            margin-right: 15px;
+        }
+        .button {
+            width: 50px;
+            background: transparent;
+            outline: 0;
+            border: 0;
+        }
+        .category {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px;
+            padding: 20px;
+        }
+        .buttons{
+            background-color: aliceblue;
+            width: 200px;
+            height: 65px;
+            border-radius: 10px;
+            border: solid black 2px;
+        }
+          
+        
+        .button:hover{
+  transform: scale(1.2);
+  transition: 0.5s;
+        }
+        
+        .button-left:hover{
+  transform: scale(1.2);
+  transition: 0.5s;
+        }
+
+        .buttons:hover{
+  transform: scale(1.1);
+  transition: 0.5s ease;
+  background-color: rgb(9, 207, 141);
+        }
+        
+       a {
+            text-decoration: none;
+            text-align: center;
+            font-size: 20px;
+            color: black;
+            margin: auto;
+        }
+
+        h2 {
+         padding: 15px;
+        }
+
+        
+    .overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(9, 1, 1);
+  background-color: rgba(11, 3, 3, 0.7);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+.overlay,span {
+    display: none;
+    margin: 10px;
+}
+ .video1 {background-color: #fff;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 230px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    height: 300px;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+  }
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+        @media (max-width:800px){
+            .overlay,span {
+    display: block;}
+
+    ul {
+        display: none;
+    }
+        
+        }
+
+        @media (max-width:600px){
+            .category{
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+       @media (max-width:450px) {
+        .button-left img{
+            width: 30px;
+            margin-right: -32px ;
+        }
+        .button img{
+            width: 30px;
+           
+        }
+        .mySlides {
+  width: 80%;
+        }
+        
+       }
+       @media (max-width:400px) {
+        .button-left img{
+            width: 30px;
+            margin-right: -22px ;
+        }
+        .button img{
+            width: 30px;
+            margin-left: -3px;
+        }
+        .mySlides {
+  width: 80%;
+        }
+       }
+@media (max-width:777px) {
+  body {
+    width: 777px;
+   }
+}
+
+    </style>
+</head>
+
+<body>
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+      <a href="/mainpage">HOME</a>
+      <a href="/about">ABOUT US</a>
+      <a href="/feedback">FEEDBACK</a>
+      <a href="/contact">CONTACT US</a>
+    </div>
+  </div>
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+  
+<!--hamburger-->
+
+<script>
+  function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+  }
+  
+  function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
+  </script>
+
+
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo ">Movie Box</h1>
+            </div>
+            <div class="menu-container">
+
+                <ul class="menu-list">
+                    <li class="menu-list-item active"> <a class="menu-list-item-content" href="#">Home</a> </li>
+                    <li class="menu-list-item"> <a class="menu-list-item-content" href="/about">About</a> </li>
+                    <li class="menu-list-item"> <a class="menu-list-item-content" href="/feedback">Feedback</a> </li>
+                    <li class="menu-list-item"> <a class="menu-list-item-content" href="/popular">Popular</a> </li>
+                    <li class="menu-list-item"> <a class="menu-list-item-content" href="#Bollywood">Bollywood</a> </li>
+                    <li class="menu-list-item"> <a class="menu-list-item-content" href="#Hollywood">Hollywood</a> </li>
+                    <li class="menu-list-item"> <a class="menu-list-item-content" href="#Web Series">Series</a> </li>
+
+                </ul>
+            </div>
+            <div class="profile-container">
+                <!-- <img class="profile-picture" src="pic1.png" alt=""> -->
+                <div class="profile-text-container">
+                    <!-- <span class="profile-text">profile</span> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="content-container">
+            
+            <section class="featured-content" id="Bollywood"  style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('kgf2.webp');
+                background-size: cover;">
+                <h3 class="title">KGF-2</h3>
+                <img class="featured-title" src="" alt="">
+                <br>
+                <br>
+                <p class="featured-desc">8.2/10 ★★★★☆ (86K) <br>
+                    Content Rating : Not Rated <br>
+                    Director : Prashanth Neel <br>
+                    Writer : Shivgopal Krishna, Prashanth Neel, Sanjay Upadhyay <br>
+                    Stars : Yash, Srinidhi Shetty, Ramachandra Raju <br>
+                    Genre : Action, Crime, Drama</p>
+                    <a href="/dashboard"><button class="featured-button">WATCH</button></a>
+            </section>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">BOLLYWOOD MOVIES</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="brahmastra.jpg" alt="">
+                            <span class="movie-list-item-title">BRAHMASTRA</span>
+                            <p class="movie-list-item-desc">5.6/10 (96K) <br>
+                                Director: Ayan Mukerji <br>
+                                Writer: Hussain Dalal, Ayan Mukerji <br>
+                                Stars: Ranbir Kapoor, Alia Bhatt, Amitabh Bachchan <br>
+                                Genre: Action, Adventure, Fantasy</p>
+                                <a href="/dashboard2"> <button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="phone bhoot.jpg" alt="">
+                            <span class="movie-list-item-title">PHONE BHOOT</span>
+                            <p class="movie-list-item-desc">Director: Gurmmeet Singh <br>
+                                Writer: Jasvinder Bath, Ravi Shankaran <br>
+                                Stars: Katrina Kaif, Sheeba Chaddha, Jackie Shroff <br>
+                                Genre: Comedy, Horror.</p>
+                                <a href="/dashboard3"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="ps1.jpg" alt="">
+                            <span class="movie-list-item-title">PS-1</span>
+                            <p class="movie-list-item-desc">8.2/10 (26K) <br>
+                                Director: Mani Ratnam <br>
+                                Writer: Mani Ratnam, Jayamohan, Kumaravel <br>
+                                Stars: Vikram, Karthi, Jayam Ravi <br>
+                                Genre: Action, Drama, Family</p>
+                                <a href="/dashboard4"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="thank god.jpg" alt="">
+                            <span class="movie-list-item-title">THANK GOD</span>
+                            <p class="movie-list-item-desc">6.3/10 (5.8K) <br>
+                                Director: Indra Kumar <br>
+                                Writer: Aakash Kaushik, Anders Matthesen, Samuthirakani <br>
+                                Stars: Arnob Khan Akib, Mahesh Balraj, Vishal Bhavsar <br>
+                                Genre: Comedy, Fantasy</p>
+                                <a href="/dashboard5"> <button class="movie-list-item-button">Watch</button></a>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="movie-list-container">
+
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="ramsetu.jpg" alt="">
+                            <span class="movie-list-item-title">Ram setu</span>
+                            <p class="movie-list-item-desc">5.2/10(7.7K) <br>
+                                Genre: Action, Adventure <br>
+                                Director: Abhishek Sharma <br>
+                                Release Date: 2022-10-25</p>
+                                <a href="/dashboard6"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="tanhaji.jpg" alt="">
+                            <span class="movie-list-item-title">Tanhaji</span>
+                            <p class="movie-list-item-desc">7.5/10(32K) <br>
+                                Director: Om Raut <br>
+                                Content Rating: Not Rated <br>
+                                Genre: Action, Biography, Drama</p>
+                                <a href="/dashboard7"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="malag.jpg" alt="">
+                            <span class="movie-list-item-title">Malang</span>
+                            <p class="movie-list-item-desc">6.5/10 (11K) <br>
+                                Content Rating: Not Rated <br>
+                                Director: Mohit Suri <br>
+                                Writer: Aseem Arrora, Aniruddha Guha, Mohit Suri <br>
+                                Stars: Aditya Roy Kapoor, Anil Kapoor, Disha Patani <br>
+                                Genre: Action, Crime, Drama</p>
+                                <a href="/dashboard8"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="bhool bhulaiyaa.jpg" alt="">
+                            <span class="movie-list-item-title">Bhool Bhulaiyaa</span>
+                            <p class="movie-list-item-desc">7.4/10 IMDb <br>
+                                GenreComedy ,Horror, Mystery ,Thriller <br>
+                                Directed by :Priyadarshan <br>
+                                Written by :Neeraj Vora ,Manisha Korde,Madhu Muttam,Ram Patil</p>
+                                <a href="/dashboard9"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <section class="featured-content" id="Hollywood" style="background:linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('avengers.jpg'); background-size: cover;
+            margin-top: 35px;  margin-right: 35px;">
+              
+              <h3 class="title">Avengers: Infinty-war</h3>
+              <br>
+              <br>
+              <br>
+                            <p class="movie-list-item-desc">6.5/10(185K)
+                <p class="featured-desc">8.4/10 ★★★★☆ (1.1M) <br>
+                    Content Rating: PG-13 <br>
+                    Director: Anthony Russo, Joe Russo <br>
+                    
+                    Stars: Robert Downey Jr., Chris Hemsworth<br>
+                    Genre: Action, Adventure, Sci-Fi</p>
+                    <a href="/dashboard"><button class="featured-button">WATCH</button></a>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title"> HOLLYWOOD MOVIES</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="black adam1.jpg" alt="">
+                            <span class="movie-list-item-title">Black Adam</span>
+                            <p class="movie-list-item-desc">7.1/10 (75K) <br>
+                                Content Rating: PG-13 <br>
+                                Director: Jaume Collet-Serra <br>
+                                Writer: Adam Sztykiel, Rory Haines, Sohrab Noshirvani <br>
+                                Stars: Dwayne Johnson, Aldis Hodge, Pierce Brosnan <br>
+                                Genre: Action, Adventure, Fantasy</p>
+                                <a href="/dashboard2"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="inception.2jpg.jpg" alt="">
+                            <span class="movie-list-item-title">Inception </span>
+                            <p class="movie-list-item-desc">8.8/10 ★★★★(2.3M) <br>
+                                Content Rating: PG-13 <br>
+                                Director: Christopher Nolan <br>
+                                Writer: Christopher Nolan <br>
+                                Stars: Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page <br>
+                                Genre: Action, Adventure, Sci-Fi</p>
+                                <a href="/dashboard3"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="love thor and hunder1.jpg" alt="">
+                            <span class="movie-list-item-title">Thor love & thunder</span>
+                            <p class="movie-list-item-desc">6.4/10★★★☆☆(296K)
+
+                                Content ratingPG-13 <br>
+                                GenreAction · Adventure · Comedy · Fantasy · Romance · Sci-Fi <br>
+                                Directed by :Taika Waititi</p>
+                                <a href="/dashboard4"> <button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="bloodshot.jpg" alt="">
+                            <span class="movie-list-item-title">Bloodshot</span>
+                            <p class="movie-list-item-desc">5.7/10 ★★★☆☆ (78K)
+                                Content Rating: PG-13 <br>
+                                Director: Dave Wilson <br>
+                                Writer: Jeff Wadlow, Eric Heisserer, Kevin VanHook <br>
+                                Stars: Vin Diesel, Eiza González, Sam Heughan <br>
+                                Genre: Action, Adventure, Sci-Fi</p>
+                                <a href="/dashboard5"><button class="movie-list-item-button" onclick="greet">Watch</button></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="the gary man1.jpg" alt="">
+                            <span class="movie-list-item-title">The gray man</span>
+                            <p class="movie-list-item-desc">6.5/10(185K)
+                                Director: Anthony Russo, Joe Russo
+                                Content Rating: PG-13
+                                Genre: Action, Thriller
+                            </p>
+                            <a href="/dashboard6"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="spider man.jpg" alt="">
+                            <span class="movie-list-item-title">Spider man</span>
+                            <p class="movie-list-item-desc">7.3/10(813K) <br>
+                                Genre: Action
+                                Director: Eric Elliott
+                                Release Date: 2022-01-21
+
+                            </p>
+                            <a href="/dashboard7"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="the nun.jpg" alt="">
+                            <span class="movie-list-item-title">Thor NUN 2</span>
+                            <p class="movie-list-item-desc">5.3/10(141K) <br>
+
+                                Director: Corin Hardy <br>
+                                Content Rating: R <br>
+                                Genre: Horror, Mystery, Thriller</p>
+                            <button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="venom.jpg" alt="">
+                            <span class="movie-list-item-title">Bloodshot</span>
+                            <p class="movie-list-item-desc">6.6/10(482K) <br>
+                                Director: Ruben Fleischer <br>
+                                Content Rating: PG-13 <br>
+                                Genre: Action, Adventure, Sci-Fi</p>
+                                <a href="/dashboard8"><button class="movie-list-item-button" onclick="greet">Watch</button></a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="content-container">
+            <section class="featured-content" id="Web Series" style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('dark.jpg'); background-size: cover;
+                margin-top: 35px;  margin-right: 35px;">
+             <h3 class="title" style="color: white;">Dark</h3>
+             <br>
+             <br>
+             <br>
+                <p class="featured-desc">8.7/10 ★★★★ (377K) <br>
+                    Genre: Crime, Drama, Mystery <br>
+                    Content Rating: TV-MA <br>
+                    Release Date: 2017-12-01</p>
+                    <a href="/dashboard9"><button class="featured-button">WATCH</button></a>
+            </section>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title" style="color: white;">WEB SERIES</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="scam1992.jpg" alt="">
+                            <span class="movie-list-item-title" style="color: white;">Scam 1992</span>
+                            <p class="movie-list-item-desc" style="color: white;">9.3/10(144K) <br>
+                                Genre: Biography, Crime, Drama <br>
+                                Content Rating: TV-14 <br>
+                                Release Date: 2020-10-09
+                            </p>
+                            <a href="/dashboard2"> <button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="tandav.jpg" alt="">
+                            <span class="movie-list-item-title" style="color: white;">Tandav</span>
+                            <p class="movie-list-item-desc" style="color: white;">4.5/10(60K) <br>
+                                Genre: Drama, Thriller <br>
+                                Content Rating: TV-14 <br>
+                                Release Date: 2021-01-14</p>
+                                <a href="/dashboard3"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="mirzapur.jpg" alt="">
+                            <span class="movie-list-item-title"style="color: white;">Mirzapur</span>
+                            <p class="movie-list-item-desc" style="color: white;">8.5/10 (72K) <br>
+                                Content Rating: TV-MA <br>
+                                Stars: Pankaj Tripathi, Ali Fazal, Shweta Tripathi <br>
+                                Genre: Action, Crime, Drama <br>
+                                Release Date: 2018-11-15 <br>
+                                Run Time: 60.</p>
+                                <a href="/dashboard4"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="panchayat.jpg" alt="">
+                            <span class="movie-list-item-title"style="color: white;">Panchayat</span>
+                            <p class="movie-list-item-desc" style="color: white;">8.9/10(70K) <br>
+                                Genre: Comedy, Drama <br>
+                                Content Rating: TV-14 <br>
+                                Release Date: 2020-03-05</p>
+                                <a href="/dashboard5"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="movie-list-container">
+
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="asur.jpg" alt="">
+                            <span class="movie-list-item-title"style="color: white;">Asur</span>
+                            <p class="movie-list-item-desc" style="color: white;">8.4/10 (42K) <br>
+                                Stars: Arshad Warsi, Barun Sobti, Anupriya Goenka <br>
+                                Genre: Crime, Drama, Mystery <br>
+                                Release Date: 2020-03-02 <br>
+                                Run Time: 43</p>
+                                <a href="/dashboard6"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="moon knight.jpg" alt="">
+                            <span class="movie-list-item-title"style="color: white;">Moon Knight</span>
+                            <p class="movie-list-item-desc" style="color: white;">7.3/10 (224K) <br>
+                                Content Rating: TV-14 <br>
+                                Stars: Oscar Isaac, Ethan Hawke, May Calamawy <br>
+                                Genre: Action, Adventure, Fantasy <br>
+                                Release Date: 2022-03-30</p>
+                                <a href="/dashboard7"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="house of dragon.jpg" alt="">
+                            <span class="movie-list-item-title"style="color: white;">House of Dragon</span>
+                            <p class="movie-list-item-desc" style="color: white;">.6/10 (230K) <br>
+                                Content Rating: TV-MA <br>
+                                Stars: Rhys Ifans, Matt Smith, Fabien Frankel <br>
+                                Genre: Action, Adventure, Drama <br>
+                                Release Date: 2022-08-21</p>
+                                <a href="/dashboard8"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="she hulk.jpg" alt="">
+                            <span class="movie-list-item-title"style="color: white;">She Hulk</span>
+                            <p class="movie-list-item-desc" style="color: white;">5.1/10(152K) <br>
+                                Genre: Action, Adventure, Comedy <br>
+                                Content Rating: TV-14 <br>
+                                Release Date: 2022-08-18</p>
+                                <a href="/dashboard9"><button class="movie-list-item-button">Watch</button></a>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- *********************** -->
+        <footer>
+            <div class="footer" style="margin-top: 25px;">
+                <div class="footer-content">
+                    <h3>Movie box</h3>
+                    <p>We have created this web page for the entertaiment purpose. we donot have intention to hurt
+                        anyone's
+                        feeling</p>
+                    <ul class="socials">
+                        <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+
+
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <p>copyright &copy;2022 movie box desigined by <span>movie box team</span> </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>

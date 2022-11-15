@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+             * {
+           margin: 0px; 
+           padding: 0px;
+        }
+       body {
+        background-color: rgb(0, 7, 9,0.2);
+        }
+        .box {    
+            
+            height: fit-content;
+        }
+    
+        button { 
+           background-color: #4CAF50; 
+            /*width: 50%;*/
+            color: rgb(17, 10, 2); 
+            padding: 10px; 
+            margin: 10px 0px; 
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 5px;
+            border: none; 
+            cursor: pointer;
+            
+             } 
+     form{
+        border: 3px solid black;
+        background-color: rgba(255, 255, 255, 0.4);
+     }
+     input[type=text], input[type=email],input[type=number],input[type=password] { 
+            /*width: 100%; */
+            margin: 8px 0;
+            padding: 12px 20px; 
+            display: inline-block; 
+            border: 2px solid rgb(0, 128, 0); 
+            border-radius: 10px;
+            box-sizing: border-box; 
+        }
+     button:hover { 
+            background-color: #fff;
+        } 
+      .cancelbtn { 
+            width: auto;
+            padding: 10px 18px;
+            margin: 10px 5px;
+        } 
+          
+       
+     .container { 
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 25px; 
+            
+            
+        } 
+    /*.form:hover {
+       background-color: rgb(152, 143, 130);
+    }*/
+    .container-logo {
+      text-align: center;
+    }
+    .form{
+    
+        height: 500px;
+        width: 400px;
+    }
+    h1 {
+        font-size: 25px;
+    }
+
+    #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  opacity: 0.8;
+  z-index: -100;
+}
+
+@media (max-width:420px ) {
+    .form {
+        height: 420px;
+        width: 300px
+    }
+    input[type=text], input[type=email],input[type=number],input[type=password] { 
+            /*width: 100%; */
+            margin: 6px 0;
+            padding: 10px 15px; 
+            display: inline-block; 
+            border: 2px solid rgb(0, 128, 0); 
+            border-radius: 10px;
+            box-sizing: border-box; 
+        }
+        h1 {
+        font-size: 25px;
+    }
+    
+    button { 
+           background-color: #4CAF50; 
+            /*width: 50%;*/
+            color: rgb(17, 10, 2); 
+            padding: 10px; 
+            margin: 10px 0px; 
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            border: none; 
+            cursor: pointer;
+            
+             }
+    h2 {
+        font-size: 15px;
+    }          
+}
+
+    </style>
+<body>
+
+    
+
+
+   <div class="back">
+    <video autoplay muted loop id="myVideo">
+        <source src="videoplayback (11).mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+ <center><img src="logo.png" alt="" width="80px"></center>
+    <div class="box">
+   <center> <h1 >Registration</h1> </center> 
+        <br>
+        <!-- <center> <h2 >Fill ur Details below</h2> </center>    -->
+        <center>
+            <form class="form" action="/register" method="post">
+                <div class="container">  
+                    
+                    <P>
+                        Full name :
+                    </P>
+                    <input type="text" name="name" placeholder="Full name">
+                <br>
+                    <p>
+                        Gmail :
+                    </p>
+                    <input type="email" name="email" placeholder="Gmail.com">
+                    <br>
+                    <p>
+                        Mobile number :
+                    </p>
+                    <input type="number" name="number" placeholder="Mobile number">
+                    <br>
+                    <p>Password :</p>
+                    <input type="password" name="password" placeholder="Password">
+                    <br>
+                    <p>
+                        <button class="btn" type="submit">
+                            Registration
+                        </button>
+                        <br>
+                        <h2><%= title %></h2>
+                    </div> 
+                        
+                </form>   
+                        
+            </center>
+                        <br>
+                       <center><h1 >If you are alredy login then click here</h1>
+                        <a href="/login"><button type="button"> Login </button></a>
+                        
+                        </center>
+
+                        <script>
+                            var video = document.getElementById("myVideo");
+                            var btn = document.getElementById("myBtn");
+                            
+                            function myFunction() {
+                              if (video.paused) {
+                                video.play();
+                                btn.innerHTML = "Pause";
+                              } else {
+                                video.pause();
+                                btn.innerHTML = "Play";
+                              }
+                            }
+                            </script>
+    </div>
+</div>
+</body>
+</html>

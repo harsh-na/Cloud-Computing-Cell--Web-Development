@@ -1,0 +1,404 @@
+<html>
+<head>
+    <title>FEEDBACK FORM</title>
+    <link rel="stylesheet" href="feed.css">
+    <link rel="stylesheet" href="star.css" >
+    <script src="https://kit.fontawesome.com/c35e642231.js" crossorigin="anonymous"></script>
+    <style>
+         .thankyouchange{
+        background-color: white;
+        padding: 10px;
+        font-size: 50px;
+        margin-top: 10px;
+        margin-bottom: 50px ;
+        display: block;
+    } 
+         .thankyouchfeed{
+        background-color: white;
+        padding: 10px;
+        font-size: 50px;
+        margin-top: 10px;
+        margin-bottom: 50px ;
+        display: block;
+    } 
+    *{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px;
+    background: rgb(0,212,240);
+background: linear-gradient(164deg, rgba(0,212,240,1) 0%, rgba(220,244,248,1) 89%);
+}
+.form{
+    margin-top: 50px;
+    background: #fff;
+    box-shadow: 0px 0px 10px  rgba(0,0,0,0.5);
+    width: 800px;
+    /* max-width: 800px; */
+    padding: 25px 40px 10px 40px;
+    
+
+}
+.row{
+    margin: 32px 0px;
+    display: flex;
+    
+}
+.input{
+    width:100%;
+    height: 40px;
+    margin :10px 20px;
+    position: relative;
+    
+
+}
+.textareafeed{
+    height: 70px;
+    width: 100%;
+}
+
+.input input,
+.textareafeed .textareafeed{
+    height: 100%;
+    width:100%;
+    display: block;
+    border: none;
+    border-bottom: 2px solid rgba(0,0,0,0.12);
+
+}.input label{
+    position: absolute;
+    bottom: 35px ;
+    font-size: 14px;
+    color: blue;
+    font-weight: 400;
+}
+.input:hover label{
+    bottom: 40px ;
+    color: rgb(255, 60, 0);
+    font-weight: 600;
+    font-size: 16px;
+    transition: all .3s;
+
+
+}
+
+
+.textareafeed label{
+    width: 100%;
+    bottom: 35px;
+    
+}
+.textareafeed textareafeed{
+    padding-top:10px ;
+    resize: none;
+}
+input{
+    font-size: 18px;
+}
+textareafeed{
+    font-size: 18px;
+    
+}
+.submit  input{
+    /* background: rgb(216,55,125); */
+    background: rgb(0,1,241);
+background: linear-gradient(130deg, rgba(0,1,241,1) 0%, rgba(246,182,5,1) 51%, rgba(10,250,251,1) 100%, rgba(246,8,221,1) 100%);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    border-radius: 10px;
+    /* font: uppercase; */
+}
+.submit:hover  input{
+    background: rgb(252,29,127);
+background: radial-gradient(circle, rgba(252,29,127,1) 0%, rgba(246,246,8,1) 100%, rgba(247,251,255,1) 100%);
+height: 50px;
+width: 101%;
+transition: all .3s;
+font-size: 30px;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html,body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    
+    background: rgb(21, 20, 20);
+}
+.container form{
+    display: none;
+}
+input:checked ~ form{
+    display: block;
+}
+.container .text{
+    font-size: 25px;
+    color: #666;
+    font-weight: 500;
+}
+.container .post{
+    display: none;
+}
+.container{
+    width:400px;
+    background: #111;
+    padding: 20px 30px;
+    border: 1px solid #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+ .star-widget input{
+    display: none;
+    
+}
+.star-widget label{
+    font-size: 40px;
+    color: #444;
+    padding: 10px;
+    float: right;
+    transition: all .1s ease;
+}
+.star-widget input:not(checked)~label:hover,
+.star-widget input:not(checked)~label:hover~label{
+    color: #fd4; 
+}
+.star-widget input:checked~label{
+    color: #fe7;
+
+}
+input#rate-5:checked~label{
+    
+    text-shadow: 0 0 20px rgb(208, 120, 53);
+}
+#rate-5:checked~form header:before{
+    content: "I loved it 😍";
+    
+
+
+}
+#rate-4:checked~form header:before{
+    
+    content: "It' Great ❤️";
+
+}
+#rate-3:checked~form header:before{
+    content: "It's Nice 👍";
+
+
+
+}
+#rate-2:checked~form header:before{
+    content: "I don't like it😒";
+
+
+}
+#rate-1:checked~form header:before{
+    content: "I hate it 😢";
+ 
+}
+form header{
+    color: #fe7;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 80px 0 20px 0;
+    text-align: center;
+    transition:all .2s ease;
+}
+.textareastar1{
+    overflow: hidden;
+    height: 120px;
+    width: 100%;
+    
+    
+    
+
+}
+.textareastar{
+    height: 100px;
+    width: 100%;
+    font-size: 17px;
+    background-color: #222;
+    padding: 10px;
+    border: 1px solid #333;
+    outline: none;
+    color: #eee;
+    resize: none;
+}
+.btn{
+    margin: 15px;
+   /* border: #eee; */
+    /* width: 100px; */
+    height: 50px;
+   
+
+}
+button{
+    color: #999;
+    font-weight: 600;
+    font-size: 20px;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #333;
+    /* outline: none; */
+    background-color: #222;
+    transition: .2s;
+
+}
+button:hover{
+    background-color: #1b1b1b;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+    .thankyou1{
+        background-color: white;
+        padding: 10px;
+        font-size: 50px;
+        margin-top: 10px;
+        margin-bottom: 50px ;
+        display: none;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="post">
+            <div class="text">Thanks for rating us🙏</div>
+            
+        </div>
+        <div class="star-widget">
+            <input type="radio" name="rate" id="rate-5">
+            <label for="rate-5" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-4">
+            <label for="rate-4" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-3">
+            <label for="rate-3" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-2">
+            <label for="rate-2" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-1">
+            <label for="rate-1" class="fas fa-star"></label>
+            <form action="#">
+                <header></header>
+                <div class="textareastar1" >
+                    <textarea id="text45" cols="30" placeholder="Describe your experience..." class="textareastar"></textarea>
+                </div>
+                <div class="btn">
+                    <button id="submit" onclick="thankyou()">POST</button>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+    <div class="thankyou" >
+
+        <h1 class="thankyou1" id="thank">
+           Thank You for rate us
+        </h1>
+   
+   
+       </div>
+    <div class="form">
+        <center><h1 class="heading">FEEDBACK FORM</h1></center>
+         <form action="#">
+            <div class="row">
+                <div class="input">
+                    <input type="text" required>
+                    <label>First Name</label>
+                </div>
+                <div class="input k">
+                    <input type="text" required>
+                    <label>Last Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input e">
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input w">
+                    
+                </div>
+            </div>
+            <div class="row textareafeed ">
+                <div class="input input1 ">
+                    <textarea  cols="30" rows="10" class="textareafeed"></textarea>
+                    <label>Feedback</label>
+                </div>
+            </div>
+            <div class="row submit">
+                <div class="input">
+                    <div class="inner"></div>
+                    <input type="submit" value="SUBMIT" onclick="thfeed()" id="submit">
+                </div>
+            </div>
+         </form>
+    </div> 
+ 
+    <div class="thankyoufeed" >
+
+     <h1 class="thankyou1s" id="thankfeed">
+        Thank You for feedback us
+     </h1>
+
+
+    </div>
+
+        <script>
+                const allstar=document.querySelectorAll(".star-widget input");
+                let text=document.querySelector(".textarea textarea");
+                let btn=document.querySelector(".btn");
+                // console.log(allstar);
+                allstar.forEach((star,i)=>{
+                let currentlevel= (allstar.length) - i ;
+                star.onclick=function(){
+                    console.log(star);
+                    
+
+                    // console.log(i+1);
+                    console.log(currentlevel);
+
+                }
+                btn.onclick=function(){
+                    let text1=text.value;
+                    console.log(text1);
+                }
+                  
+
+              })
+              function thankyou(){
+        document.getElementById("thank").classList.add("thankyouchange")
+        
+
+             }
+              function thfeed(){
+        document.getElementById("thankfeed").classList.add("thankyouchfeed")
+        
+
+             }
+        </script>
+     
+             
+        </script>
+         <script src="feed.js"></script> 
+         <script src="fireConfig1.js"></script> 
+    <script src="feed.js"></script> 
+    <script src="fireConfig1.js"></script> 
+</body>
+</html>
