@@ -1,0 +1,434 @@
+/** {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 90px;
+    width: 100%;
+    background-color: #EFEEF1;
+    /* position: fixed; 
+    top: 0px;
+    z-index: 10;
+    overflow:hidden;
+    
+    position: fixed;
+
+}
+
+.logo {
+
+    position: absolute;
+    width: 100.87px;
+    height: 90px;
+    left: 5px;
+    top: 0px;
+}
+
+.buttonoftop {
+    position: absolute;
+    font-size: 35px;
+    font-weight: 400;
+    height: 40px;
+    width: 210px;
+    left: 289px;
+    top: 67px;
+    color: aliceblue;
+    
+
+}
+
+.btn-login {
+    position: absolute;
+    width: 100px;
+    left: 850px;
+    height: 54px;
+    top: -50px;
+    font-family: 'Judson';
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 58px;
+    color: #6504B5;
+
+}
+
+.btn-signup {
+    position: absolute;
+    width: 100px;
+    left: 1020px;
+    height: 54px;
+    top: -50px;
+    font-family: 'Judson';
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 58px;
+    color: #6504B5;
+
+}
+
+#disp {
+    position: relative;
+    top: 25px;
+    left: 110px;
+    color: #6504B5;
+    
+}
+
+.mid {
+    height: 65px;
+    width: 100%;
+    background-color: #6504B5;
+    position: fixed;
+    top: 90px;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.mid a {
+    position: relative;
+    top: 20px;
+    color: white;
+    padding-top: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    text-decoration: none;
+}*/
+/** {
+	margin:0;
+	padding:0;
+}
+
+header{
+    height: 90px;
+    width: 100%;
+    background-color: #EFEEF1;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+
+}
+.logo{
+
+position: absolute;
+width: 100.87px;
+height: 90px;
+left: 5px;
+top: 0px;
+}
+
+.buttonoftop{
+    position: absolute;
+    font-size: 35px;
+    font-weight: 400;
+    height: 40px;
+    width: 210px;
+    left: 289px;
+    top: 67px;
+    color: aliceblue;
+
+}
+.btn-login{
+    position: absolute;
+    width: 100px;
+    left: 850px;
+    height: 54px;
+    top: -50px;
+    font-family: 'Judson';
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 58px;
+    color: #6504B5;
+    
+}
+.btn-signup{
+    position: absolute;
+    width: 100px;
+    left: 1020px;
+    height: 54px;
+    top: -50px;
+    font-family: 'Judson';
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 58px;
+    color: #6504B5;
+    
+}
+#disp{
+    position: relative;
+    top: 25px;
+    left: 110px;
+    color: #6504B5;
+    
+}
+
+.mid{
+    height: 65px;
+    width: 100%;
+    background-color: #6504B5;
+    position: fixed;
+    top: 90px;
+    z-index: +1;
+}
+#insta {
+    position: absolute;
+width: 50px;
+height: 50px;
+right: 2.5%;
+top: 10%;
+}
+#facebook{
+    position: absolute;
+width: 50px;
+height: 50px;
+right: 7.5%;
+top: 10%;
+}
+#twitter{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 12.5%;
+    top: 10%;
+}
+
+.mid a{
+    position: relative;
+    top: 20px;
+    color: white;
+    padding-top:20px;
+    padding-right: 20px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    text-decoration: none;
+}*/
+* {
+	margin:0;
+	padding:0;
+
+}
+
+
+header{
+    height: 14%;
+    width: 100%;
+    background-color: #EFEEF1;
+    position: fixed;
+    top: 0%;
+    z-index: 10;
+
+}
+.logo{
+
+position: absolute;
+width: 6%;
+height: 75%;
+left: .5%;
+top: 10%;
+}
+
+.buttonoftop{
+    position: absolute;
+    font-size: 35px;
+    font-weight: 400;
+    height: 7vh;
+    width: 14vw;
+    left: 20%;
+    top: 80%;
+    color: aliceblue;
+
+}
+.btn-login{
+    position: absolute;
+    width: 5vw;
+    left: 450%;
+    height: 8vh;
+    top: -7vh;
+    font-family: 'Judson';
+    font-weight: 100;
+    font-size: 50%;
+    line-height: 50px;
+    color: #6504B5;
+    
+}
+.btn-signup{
+   position: absolute;
+    width: 5vw;
+    left: 520%;
+    height: 8vh;
+    top: -7vh;
+    font-family: 'Judson';
+    font-weight: 100;
+    font-size: 50%;
+    line-height: 50px;
+    color: #6504B5;
+    
+    
+}
+#disp{
+    position: relative;
+    top: 5vh;
+    left: 7%;
+    color: #6504B5;
+    
+}
+
+.mid{
+    height: 10vh;
+    width: 100%;
+    background-color: #6504B5;
+    position: fixed;
+   top: 14%;
+    z-index: +1;
+}
+#insta {
+    position: absolute;
+width: 3.7%;
+height: 80%;
+right: 2.5%;
+top: 10%;
+}
+#facebook{
+    position: absolute;
+width: 3.7%;
+height: 80%;
+right: 7.5%;
+top: 10%;
+}
+#twitter{
+    position: absolute;
+    width: 3.7%;
+    height: 75%;
+    right: 12.5%;
+    top: 10%;
+}
+
+.mid a{
+    position: relative;
+    top: 30%;
+    color: white;
+    padding-top:10%;
+    padding-right: 2%;
+    font-size: 140%;
+    padding-left: 2%;
+    padding-bottom: 3%;
+    text-decoration: none;
+}
+
+
+/*.image img {
+   position: absolute;
+   width: 100%;
+   height: 90vh;
+   left: 0px;
+   top: 20%;
+   overflow: hidden;
+}*/
+
+
+.last {
+    height: 9vh;
+    width: 200vw;
+    background-color: #8F74C6;
+    position: fixed;
+    top: 24vh;
+    z-index: 10;
+    }
+
+.last a {
+    position: relative;
+    top: 31%;
+    color: white;
+    padding-top:7%;
+    padding-right: 1%;
+    font-size: 140%;
+    padding-left: 1%;
+    padding-bottom: 1%;
+    text-decoration: none;
+   
+}
+
+.image img {
+    position: absolute;
+    width: 100%;
+    height: 120vh;
+    left: 0px;
+    top: 28%;
+    overflow: hidden;
+ }
+
+ .top h3{
+    position: absolute;
+width: 50vw;
+height: 40vh;
+left: 25%;
+top: 1200px;
+
+font-family: 'Judson';
+font-style: normal;
+font-weight: 400;
+font-size: 350%;
+line-height: 155%;
+text-align: center;
+color: #6504B5;
+}
+
+.rep{
+    position: absolute;
+width: 30%;
+height: 30vh;
+left: 50%;
+top: 210%;
+
+}
+.rep button{
+    border-radius: 20%;
+    height: 8vh;
+    width:8vw;
+   
+    background: #6504B5;
+    
+    text-align: center;
+    
+}
+.rep a{
+    color:#EFEEF1;
+    text-decoration: none;
+    
+}
+.footer{
+    height: 45vh;
+    width: 100%;
+    background-color: #6504B5;
+    position: absolute;
+    top: 240%;
+    z-index: +1;
+ }
+ #footimg{
+    position: absolute;
+    top: 17%;
+    width: 7%;
+    left: 43%;
+ }
+ 
+ #foottext{
+    position: absolute;
+    color: white;
+    left: 50%;
+    top: 25%;
+    font-size: 270%;
+ }
+ 
+ #lasttext{
+    position: absolute;
+    color: white;
+    left: 27%;
+    top: 53%;
+    font-size: 31px;
+ }
+ 
+ 
+ 
+ 
