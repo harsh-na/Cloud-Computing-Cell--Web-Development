@@ -1,0 +1,526 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+header{
+    height: 90px;
+    width: 100%;
+    background-color: #EFEEF1;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+
+}
+
+.logo{
+
+    position: absolute;
+    width: 100.87px;
+    height: 90px;
+    left: 5px;
+    top: 0px;
+    }
+    .buttonoftop{
+        position: relative;
+        font-size: 35px;
+        font-weight: 400;
+        height: 40px;
+        width: 210px;
+        top: 67px;
+        color: aliceblue;
+        /* margin-left: 50rem; */
+        left: 55%;
+    
+    }
+    .btn-login{
+        position: relative;
+        width: 100px;
+        height: 54px;
+        top: -90px;
+        font-family: 'Judson';
+        font-weight: 100;
+        font-size: 20px;
+        line-height: 58px;
+        color: #6504B5;
+        left: 190%;
+        
+    }
+    .btn-signup{
+        position: relative;
+        width: 100px;
+        height: 54px;
+        top: -90px;
+        font-family: 'Judson';
+        font-weight: 100;
+        font-size: 20px;
+        line-height: 58px;
+        color: #6504B5;
+        left: 190%;
+    }
+        
+
+    #disp{
+        position: relative;
+        top: 25px;
+        left: 110px;
+        color: #6504B5;
+    }
+    
+.mid{
+height: 65px;
+width: 100%;
+background-color: #6504B5;
+position: fixed;
+ top: 90px;
+ z-index: +1;
+}
+
+.beech{
+height: 65px;
+width: 100%;
+background-color: #8F74C6;;
+position: fixed;
+top: 19.4%;
+z-index: +1;
+font-weight: 400;
+display: flex;
+flex-direction: row;
+}
+ul{
+   list-style: none; 
+}
+ #insta {
+    position: absolute;
+width: 50px;
+height: 50px;
+right: 2.5%;
+top: 10%;
+}
+#facebook{
+    position: absolute;
+width: 50px;
+height: 50px;
+right: 7.5%;
+top: 10%;
+}
+#twitter{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 12.5%;
+    top: 10%;
+}
+.mid a{
+    position: relative;
+    top: 20px;
+    color: white;
+    padding-top:20px;
+    padding-right: 20px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    text-decoration: none;
+}
+.card:hover{
+    transform: scale(1.3);
+    background: conic-gradient(from 90deg at 50% 50%, #8F74C6 0deg, rgba(143, 116, 198, 0.984375) 110.62deg, rgba(143, 116, 198, 0) 271.87deg, #8F74C6 360deg);
+transform: matrix( 0, 0, -1, 0, 0);
+    overscroll-behavior-x: 2px 2px 2px #000;
+}
+.box{
+    margin-top: 05%;
+    margin-left: 20%;
+    height: 170px;
+    width: 250px;
+    
+    border-radius: 30px;
+    background-color: #8F74C6;
+    text-align: center;
+    padding-top: 10px;
+    font-size:35px;
+}
+#box2{
+    background-color: #1583CC;;
+}
+
+#lost{
+    margin-left: 18.6px;
+    height: 90px;
+    width: 140px;
+    border-radius: 30px;
+    text-align: center;
+    font-size:35px;
+    }
+#found{
+    margin-left:18.6px ;
+    height: 100px;
+    width: 140px;
+    border-radius: 30px;
+    text-align: center;
+    font-size:35px;
+}
+#recent{
+    position: absolute;
+    left: 42%;
+    margin-top: 18%;
+  
+    letter-spacing: 2px;
+    color: #6504B5;
+    font-size: 40px;
+}
+
+.box_3{
+
+display: flex;
+justify-content: center;
+
+
+
+}
+.card{
+    position: relative;
+    width:250px;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 20px;
+    top: 340px;
+    margin: 10px;
+    /* background-color: #6504B5; */
+    color: white;
+    padding-bottom: 20px;
+    background: conic-gradient(from 90deg at 50% 50%, #8F74C6 0deg, rgba(143, 116, 198, 0.984375) 110.62deg, rgba(143, 116, 198, 0) 271.87deg, #8F74C6 360deg);
+transform: matrix( 0, 0, -1, 0, 0);
+transition: .3s;
+}
+.img3{
+    width: 80%;
+   
+    height: 70%;
+    margin-top: 30px;
+border-radius: 20px;
+}
+.img2{
+    width: 80%;
+   
+border-radius: 20px;
+height: 70%;
+margin-top: 30px;
+}
+.img1{
+    height: 70%;
+    margin-top: 30px;
+    width: 80%;
+  
+    border-radius: 20px;
+}
+
+
+.footer{
+    height: 450px;
+    width: 100%;
+    background-color: #6504B5;
+    position: absolute;
+    top: 105%;
+    z-index: +1;
+ }
+ #footimg{
+    position: absolute;
+    top: 10%;
+    width: 12%;
+    left: 37%;
+ }
+
+ #foottext{
+    position: absolute;
+    color: white;
+    left: 50%;
+    top: 25%;
+    font-size: 50px;
+ }
+
+ #lasttext{
+    position: absolute;
+    color: white;
+    left: 27%;
+    top: 50%;
+    font-size: 31px;
+ }
+
+ .mid a{
+    position: relative;
+    top: 20px;
+    color: white;
+    padding-top:20px;
+    padding-right: 20px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    text-decoration: none;
+}
+
+
+ .mid a:hover {
+    border-radius: 20px;
+    background : snow ;
+    color: #6504B5;
+  } 
+#lostpets{
+    border-radius: 30px;
+    background : snow ;
+    color: #6504B5;
+}
+/* #contact2{
+    border-radius: 20px;
+    background :#6504B5 ;
+    color: white;   
+
+} */
+p{
+    padding-top: 20px;
+    font-size: 70px;
+    
+}
+.hamb{
+    display: none;
+    cursor: pointer;
+    
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+    background-color:#6504B5;
+}
+
+@media (max-width:768px) {
+
+
+    .hamb{
+        display: block;
+        margin-top: 10%;
+        
+    }
+    .hamb.active.bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamb.active.bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamb.active.bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .box_3{
+        display: block;
+        margin-left: 33%;
+        
+    }
+
+    .beech{
+        position: fixed; 
+        left: -100%;
+        height: 35%;
+        flex-direction: column;
+        transition: .3s;
+        text-align: center;
+        background-color:#8F74C6
+    }
+    .navitem{
+        margin: 16px 0;
+        
+       
+    }
+    .beech.active{
+        left: 0;
+    }
+   #recent{
+    font-size: 40px;
+    left: 35%;
+    top: 7%;
+    margin-top: 18%;
+   }
+    .footer{
+       
+            height: 28%;
+            width: 100%;
+            background-color: #6504B5;  
+        top: 100%;
+    }
+
+    #foottext{
+
+        left: 40%;
+        top: 25%;
+        font-size: 40px;
+     }
+    
+     #lasttext{
+        position: absolute;
+        color: white;
+        left: 10%;
+       
+        font-size: 26px;
+     }
+     #footimg{
+        width: 12%;
+        left: 27%;
+     }
+     .card{
+        height: 170px;
+        width: 260px;
+       
+     }
+
+     .buttonoftop{
+        
+       
+        left: 19%;
+        top: 67px;
+        color: aliceblue;
+}
+#insta {
+        
+    position: absolute;
+width:30px;
+height: 30px;
+right: 2.5%;
+top: 32%;
+}
+#facebook{
+   
+    position: absolute;
+width: 30px;
+height:30px;
+right: 7.5%;
+top: 32%;
+}
+#twitter{
+  
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 12.5%;
+    top: 32%;
+}
+}
+
+
+@media (max-width:375px) {
+    .logo{
+        top: 7%;
+        height: 60px;
+        width: 60px;
+    }
+   
+    header{
+        font-size: 10px;
+    }
+    .mid a{
+        
+        padding-top:2px;
+        padding-right: 2px;
+        font-size: 9px;
+        padding-left: 2px;
+        padding-bottom: 2px;
+        text-decoration: none;
+    }
+    #insta {
+        
+        position: absolute;
+    width:24px;
+    height: 24px;
+    right: 2.5%;
+    top: 32%;
+    }
+    #facebook{
+       
+        position: absolute;
+    width: 24px;
+    height:24px;
+    right: 10.5%;
+    top: 32%;
+    }
+    #twitter{
+      
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        right: 18.5%;
+        top: 32%;
+    }
+    .mid{
+        height:50px;
+    }
+    #recent{
+        font-size: 40px;
+        left: 30%;
+        top: 24%;
+        margin-top: 18%;
+        font-size: 30px;
+       }
+       
+        .footer{
+           
+                height: 20%;
+                width: 100%;
+                background-color: #6504B5;  
+            top: 110%;
+        }
+    
+        #foottext{
+    
+            left: 40%;
+            top: 25%;
+            font-size: 20px;
+         }
+        
+         #lasttext{
+            position: absolute;
+            color: white;
+            left: 10%;
+           
+            font-size: 18px;
+         }
+         #footimg{
+            width: 12%;
+            left: 27%;
+         }
+         .card{
+           
+            height: 100px;
+            width: 150px;
+            margin-top: 5px;
+         }
+         .img3{
+           
+            margin-top: 10px;
+       
+        }
+        .img2{
+            
+        margin-top: 10px;
+        }
+        .img1{
+           
+            margin-top: 10px;
+       
+        }
+        .text{
+            font-size: small;
+        }
+    
+         .buttonoftop{
+            left: 19%;
+            top: 67px;
+            color: aliceblue;
+    }
+   
+
+
+
+}
+

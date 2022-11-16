@@ -1,0 +1,188 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+header{
+    height: 90px;
+    width: 100%;
+    background-color: #EFEEF1;
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+
+}
+.logo{
+
+position: absolute;
+width: 100.87px;
+height: 90px;
+left: 5px;
+top: 0px;
+}
+
+.buttonoftop{
+    position: absolute;
+    font-size: 35px;
+    font-weight: 400;
+    height: 40px;
+    width: 210px;
+    left: 289px;
+    top: 67px;
+    color: aliceblue;
+
+}
+.btn-login{
+    position: absolute;
+    width: 100px;
+    left: 850px;
+    height: 54px;
+    top: -50px;
+    font-family: 'Judson';
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 58px;
+    color: #6504B5;
+    
+}
+.btn-signup{
+    position: absolute;
+    width: 100px;
+    left: 1020px;
+    height: 54px;
+    top: -50px;
+    font-family: 'Judson';
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 58px;
+    color: #6504B5;
+    
+}
+#disp{
+    position: relative;
+    top: 25px;
+    left: 110px;
+    color: #6504B5;
+}
+
+.mid{
+    height: 65px;
+    width: 100%;
+    background-color: #6504B5;
+    position: fixed;
+    top: 90px;
+    z-index: +1;
+}
+#insta {
+    position: absolute;
+width: 50px;
+height: 50px;
+right: 2.5%;
+top: 10%;
+}
+#facebook{
+    position: absolute;
+width: 50px;
+height: 50px;
+right: 7.5%;
+top: 10%;
+}
+#twitter{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 12.5%;
+    top: 10%;
+}
+
+.mid a{
+    position: relative;
+    top: 20px;
+    color: white;
+    padding-top:20px;
+    padding-right: 20px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    text-decoration: none;
+}
+
+
+.mid a:hover {
+    border-radius: 20px;
+    background : snow ;
+    color: #6504B5;
+  } 
+
+#contact{
+  border-radius: 10px;
+    
+}
+
+
+#ourteam{
+    position: absolute;
+    color: #6504B5;
+    left: 150px;
+    left: 45%;
+    margin-top: 12%;
+    font-size: 500;
+    letter-spacing: 4px;
+}
+
+ #vinayak{
+
+  width:50%;
+  height: 120%;
+  position: absolute;
+/* left: 0%; */
+top: 29.5%;
+}
+
+#taru{
+    position: absolute;
+    top: 150%;
+    width: 50%;
+    height: 118%;
+    right: 0%;
+}
+ #sanchi{
+    left: 0%;
+    width: 50%;
+    position: absolute;
+    top: 268%;
+    height: 120%px;
+ }
+
+ .footer{
+    height: 450px;
+    width: 100%;
+    background-color: #6504B5;
+    position: absolute;
+    top: 406%;
+    z-index: +1;
+ }
+ #footimg{
+    position: absolute;
+    top: 10%;
+    width: 12%;
+    left: 37%;
+ }
+
+ #foottext{
+    position: absolute;
+    color: white;
+    left: 50%;
+    top: 25%;
+    font-size: 50px;
+ }
+
+ #lasttext{
+    position: absolute;
+    color: white;
+    left: 27%;
+    top: 50%;
+    font-size: 31px;
+ }
+
+

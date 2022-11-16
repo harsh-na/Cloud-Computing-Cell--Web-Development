@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="script" href="script.js"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="left">
+            <img class="logo" id="toplogo" src="images/logo-removebg-preview.png"> <h1 id="disp">PET FINDER</h1>
+        </div>
+    
+        <div class="buttonoftop"> 
+            <button id="login" class="btn-login"><a href="../sanchi/create.html">Log In</a></button>
+            <button id="signup" class="btn-signup"><a href="../sanchi/sanch.html">Sign Up</a></button>
+        </div>
+    </header>
+  <!-- BEECH KA CODE #BLUE COLOR TOP KA -->
+  <div class="mid">
+    <a href="#">PET LOVE</a>
+    <a href="#">LOST PETS</a>
+    <a href="#">OUR ORGANISATION</a>
+    <a id="contact" href="#">CONTACT</a>
+
+
+    <div class="right">
+    <img id="insta" src="images/instagram-removebg-preview.png"href="https://www.instagram.com/ivinayak.sharma/">
+        <img id="facebook" src="images/facebook-removebg-preview.png"href="https://www.instagram.com/ivinayak.sharma/">
+        <img id="twitter" src="images/twitter.png"href="https://www.instagram.com/ivinayak.sharma/">       
+</div>
+
+<div class="beech">
+    <a href="#">I Found A Pet</a>
+    <a href="#">I Lost A Pet</a>
+    <a href="#">Help Lost Pets</a>
+    <a id="contact" href="#">About</a>
+
+    <!-- <div class="container">
+        <div class="menulogo"></div>
+        <div class="menulogo"></div>
+        <div class="menulogo"></div>
+    </div> -->
+</div>
+</div>
+<img src="images/bg img.jpeg" id="midimg">
+<h1 id="petlife">Pets are Life</h1>
+<img src="images/midimg-removebg-preview.png" id="midimg2">
+<h1 id="reunite">We as a team help pets reunite with their families.</h1>
+<h2 id="upload">Upload a photo of your pet and help us find your pet. </h2>
+
+<div class="container1">
+    <div class="box"><p> <img src="images/lost.png" id="lost">I Lost A Pet</p></div>
+    <div class="box" id="box2a"><p> <img src="images/foung.png" id="found">  I Found A Pet</p></div>
+</div>
+<h1 id="recent">RECENTLY UPLOADED PETS</h1>
+
+<div class="box_3">
+   
+    <div class="card">
+        <img src="images/WhatsApp Image 2022-11-02 at 8.45.54 AM (1).jpeg" class="img3"> 
+        <div class="text">
+    <h3>Found Pet</h3>
+    <p><h3>Found Yesterday</h3></p>
+        </div> 
+</div>
+   
+    <div class="card">
+        <img src="images/WhatsApp Image 2022-11-02 at 8.45.54 AM.jpeg"class="img3"> 
+        <div class="text">
+ <h3>Found Pet</h3>
+    <p><h3>Found Yesterday</h3></p>
+        </div> 
+
+</div>
+    <div class="card">
+        <img src="images/WhatsApp Image 2022-11-02 at 8.45.55 AM.jpeg" class="img3"> 
+        <div class="text">
+    <h3>Found Pet</h3> 
+    <p><h3>Found Yesterday</h3></p>
+        </div> 
+    </div>
+</div>
+
+<img src="images/midimg.jpg" class="fact">
+
+<div class="bottom">
+<h3 id="bottom_head">1 in 3 pets will go missing in their lifetime
+</h3>
+<p id="bottom_item">This staggering number is why we created Pet 
+    Love, which simplifies and shortens the 
+    lost pet search with just one photo of your pet. 
+    We are here for you should the unthinkable
+     happen to a pet you love or find.
+</p>
+</div>
+
+
+<div class="footer">
+    <img src="images/logo-removebg-preview.png" id="footimg">
+    <h1 id="foottext">Pet Love</h1>
+    <p id="lasttext">A website where you can find your lost pet and can adopt one.</p>
+    </div>    
+<script>
+    let bg = document.getElementById("midimg");
+let bg2 = document.getElementById("midimg2");
+let petlife = document.getElementById("petlife");
+
+window.addEventListener('scroll',function(){
+    var value = window.scrollY;
+
+    bg.style.top = value* 0.2 +'px';
+    bg2.style.right = -value* 0.9 +'px';
+    petlife.style.left = -value* 0.9 +'px';
+})
+</script>
+</body>
+</html>
